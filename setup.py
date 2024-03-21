@@ -36,7 +36,7 @@ except IndexError:
           "We assume that is it inferior to %s." % SPIN_PIP_VER)
 
 if version >= SPIN_PIP_VER:
-    install_requires.append('mininet @ git+https://github.com/mininet/mininet@{ver}'
+    install_requires.append('mininet @ https://github.com/RussoFrancesco/mininet@{ver}'
                             .format(ver=MININET_VERSION))
 else:
     print("You should run pip with --process-dependency-links to install all the dependencies")
