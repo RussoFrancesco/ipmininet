@@ -72,14 +72,14 @@ def install_mininet(output_dir: str, pip_install=True):
     # Save valid version of mininet install script
     '''
     sh("git checkout %s" % MininetInstallCommit,
-       cwd=os.path.join(output_dir, "mininet/util"))'''
+       cwd=os.path.join(output_dir, "mininet/util"))
     sh("cp install.sh install.tmp.sh",
        cwd=os.path.join(output_dir, "mininet/util"))
     # Use it in the fixed version of Mininet
     sh("git checkout %s" % MininetVersion,
        cwd=os.path.join(output_dir, "mininet/util"))
     sh("mv install.tmp.sh install.sh",
-       cwd=os.path.join(output_dir, "mininet/util"))
+       cwd=os.path.join(output_dir, "mininet/util"))'''
     sh("./install.sh %s -s ." % mininet_opts,
        cwd=os.path.join(output_dir, "mininet/util"))
 
