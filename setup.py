@@ -65,14 +65,14 @@ def setup_mininet_dep():
 class PostDevelopCommand(develop):
     """Post-installation for development mode."""
     def run(self):
-        setup_mininet_dep()
+        #setup_mininet_dep()
         develop.run(self)
 
 
 class PostInstallCommand(install):
     """Post-installation for installation mode."""
     def run(self):
-        setup_mininet_dep()
+        #setup_mininet_dep()
         install.run(self)
 
 
